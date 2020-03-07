@@ -1,0 +1,31 @@
+version: '3'
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'
+  react:
+    container_name: docker-node-react
+    restart: always
+    build: 
+      context: "ReactApp"
+      dockerfile: "Dockerfile"
+    ports:
+      - '80:3000'
+    links:
+      - app
+    volumes:
+      - ./ReactApp:/mnt
+  app:
+    container_name: docker-node-express
+    restart: always
+    build: 
+      context: "ExpressApp"
+      dockerfile: "Dockerfile"
+    ports:
+      - '3000:3000'
+    links:
+      - mongo
+    volumes:
+      - ./ExpressApp:/mnt

@@ -1,0 +1,59 @@
+.tm-listbox {
+        border: solid 1px black;
+        background-color:       white;
+        width:  90%;
+        height: 250px;
+}
+
+.tm-text {
+        float:          left;
+        background:     rgba(200,200,225,1);
+        color:          black;
+        width:  60%;
+}
+.tm-priority {
+        float:          left;
+        background:     rgba(200,225,225,1);
+        color:          black;
+        background-color: white;
+        width:  20%;
+}
+
+.tm-button {
+        float:          left;
+        background:     rgba(200,225,225,1);
+        color:          black;
+        background-color: white;
+        width:  10%;
+}
+
+.tm-wide {
+        width:  100%;
+}
+
+.tm-green {
+        color: green;
+}
+
+.tm-yellow {
+        color: #ffcc00;
+}
+
+.tm-red {
+        color: red;
+}
+
+.tm-title1 {
+        float: left;
+        width:  60%;
+        background:     rgba(0,0,0,1);
+        color:          lightblue;
+}
+
+.tm-title2 {
+        float: left;
+        width:  20%;
+        background:     rgba(0,0,0,1);
+        color:          lightblue;
+}
+
