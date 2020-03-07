@@ -6,9 +6,13 @@
 
 This program is a three-tiered application consisting of the following parts:
 
+
 React - website running on port 80
+
 express - API running on port 3000
+
 mongo - database
+
 This program uses docker-compose. Run the following commands to build and run the site, which will then be accessible via the browser at localhost:
 
     docker-compose build
