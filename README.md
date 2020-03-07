@@ -23,6 +23,7 @@ This program uses docker-compose. Run the following commands to build and run th
 The program itself has two pages:
 
 **About**
+
 Basically a copy of this README file.
 
 **HOME**
@@ -46,6 +47,9 @@ Click the Add Task button to re-save the task and return to the Task Manager.
 Click the delete button.
 At the prompt, click OK to confirm the deletion.
 You will be returned to the Task Manager
+
+
+************************************************************
 
 
 **KNOWN ISSUES:**
