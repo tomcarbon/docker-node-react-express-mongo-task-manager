@@ -97,7 +97,7 @@ class TaskManager extends React.Component {
                                 return;
                         }
                 } 
-		var myList = this.state.arr;
+                var myList = JSON.parse(sessionStorage.getItem("voila"));
                 var newArr = [];
 
 		console.info("value of index._id = " + myList[index]._id);
@@ -130,8 +130,8 @@ class TaskManager extends React.Component {
                                 case "low":     sortidx = 3; break;
                                 default:        break;
                         }
-                        var y = [];
-                        y = this.state.arr;
+                        let y = [];
+			y= JSON.parse(sessionStorage.getItem("voila"));
                         y.push({ sortidx: sortidx, text: this.state.readyTextBox, priority: this.state.readyDropdown });
                         this.setState({arr:y});
 			this.addit(this.state.readyTextBox, this.state.readyDropdown);
@@ -147,7 +147,7 @@ class TaskManager extends React.Component {
                         this.deleteRecord(this.state.erec['idx'], false);
                         this.setState({ erec: {edit: false, idx: 0}});
                 } else {
-			this.loaditup();
+			window.location.reload(false);
                 }
         }
 

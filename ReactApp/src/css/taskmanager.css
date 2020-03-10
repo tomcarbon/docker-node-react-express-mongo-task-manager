@@ -3,6 +3,7 @@
         background-color:       white;
         width:  90%;
         height: 250px;
+	overflow-y: auto;
 }
 
 .tm-text {
