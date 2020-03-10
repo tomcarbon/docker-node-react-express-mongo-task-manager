@@ -38,7 +38,6 @@ class TaskManager extends React.Component {
 
 	/* load everything from the mongo database */
 	loaditup = () => {
-		console.info("top of loaditup");
 		this.openPleaseWait();
 		var work = "http://localhost:3000/";
 		var that = this;
@@ -74,7 +73,6 @@ class TaskManager extends React.Component {
 
 	/* delete one record from Mongo DB */
 	deleteit = (a) => {
-		console.info("top of delete it");
 		var body = "_id=" + a ;
                 var work = "http://localhost:3000/item/delete/";
 		(async () => {
@@ -85,7 +83,11 @@ class TaskManager extends React.Component {
 				    });
 			  const content = await rawResponse.json();
 			  console.log(content);
+			/*
+			alert("done and reloading page.");
+			*/
 		})();
+		window.location.reload(false);
 	}
 
         deleteRecord = (index, confirmMessage) => {
@@ -107,10 +109,6 @@ class TaskManager extends React.Component {
                                 newArr.push(myList[i]);
                         }
                 }
-		/*
-		this.setState({arr: newArr});
-		*/
-		this.loaditup();
         }
 
         openModal = () => {
