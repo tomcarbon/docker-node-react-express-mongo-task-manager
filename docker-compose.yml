@@ -5,19 +5,9 @@ services:
     image: mongo
     ports:
       - '27017:27017'
-  react:
-    container_name: docker-node-react
-    restart: always
-    build: 
-      context: "ReactApp"
-      dockerfile: "Dockerfile"
-    ports:
-      - '80:3000'
-    links:
-      - app
-    volumes:
-      - ./ReactApp:/mnt
   app:
+    depends_on: 
+      - mongo
     container_name: docker-node-express
     restart: always
     build: 
@@ -29,3 +19,17 @@ services:
       - mongo
     volumes:
       - ./ExpressApp:/mnt
+  react:
+    depends_on: 
+      - app
+    container_name: docker-node-react
+    restart: always
+    build: 
+      context: "ReactApp"
+      dockerfile: "Dockerfile"
+    ports:
+      - '80:3000'
+    links:
+      - app
+    volumes:
+      - ./ReactApp:/mnt
