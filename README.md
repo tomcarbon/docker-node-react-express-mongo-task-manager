@@ -54,7 +54,7 @@ You will be returned to the Task Manager
 
 **KNOWN ISSUES:**
 
-1) (resovoled 20200309) Initialization: After running docker-compose, sometimes the Express container fails. The PLEASE WAIT Screen hangs. Restarting the container solves the problem. This seems to be an ordering issue with the docker-compose.
+1) (resolved 20200309) Initialization: After running docker-compose, sometimes the Express container fails. The PLEASE WAIT Screen hangs. Restarting the container solves the problem. This seems to be an ordering issue with the docker-compose.
 
 2) During use: The program freezes after deleting (or editing) six consequetive records. The PLEASE WAIT Screen hangs. It seems like the problem could be on the react side as there is no feedback whatsoever on the express server - ugh. I'll squash this bug.
 
