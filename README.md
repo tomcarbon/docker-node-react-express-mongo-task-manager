@@ -51,6 +51,7 @@ You will be returned to the Task Manager
 
 ************************************************************
 
+Note: To run this on your own server, replace the 3 references to 'localhost' in TaskManager.js with your own IPv4 IP address.
 
 **KNOWN ISSUES:**
 
