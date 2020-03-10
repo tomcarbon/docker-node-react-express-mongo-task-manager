@@ -1,5 +1,5 @@
 {
-  "name": "docker-react-dungeons-dragons-dice-roller",
+  "name": "docker-node-react-express-mongo-task-manager",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
