@@ -22,27 +22,31 @@ This program uses docker-compose. Run the following commands to build and run th
 
 The program itself has two pages:
 
+**HOME**
+
+The main page with the Task Manager application.
+
 **About**
 
 Basically a copy of this README file.
 
-**HOME**
+************************************************************
 
-Instructions for using the Task Manager
+**Instructions for using the Task Manager**
 
-**To add a task:**
+*To add a task:*
 
 Click the Add a new task button.
 Select the name of the task, and the priority (low, medium, or high).
 Click the Add Task button to add this task to the manager.
 
-**To edit a task:**
+*To edit a task:*
 
 Click the edit button.
 Change the Task Name and the Priority values as needed.
 Click the Add Task button to re-save the task and return to the Task Manager.
 
-**To delete a task:**
+*To delete a task:*
 
 Click the delete button.
 At the prompt, click OK to confirm the deletion.
@@ -53,11 +57,3 @@ You will be returned to the Task Manager
 
 Note: To run this on your own server, replace the 3 references to 'localhost' in TaskManager.js with your own IPv4 IP address.
 
-**KNOWN ISSUES:**
-
-1) (resolved 20200309) Initialization: After running docker-compose, sometimes the Express container fails. The PLEASE WAIT Screen hangs. Restarting the container solves the problem. This seems to be an ordering issue with the docker-compose.
-
-2) (resolved 20200310) During use: The program freezes after deleting (or editing) six consequetive records. The PLEASE WAIT Screen hangs. It seems like the problem could be on the react side as there is no feedback whatsoever on the express server - ugh. I'll squash this bug.
-
-
-These will get fixed.
