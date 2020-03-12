@@ -6,6 +6,7 @@ import '../css/taskmanager.css';
 import TaskManagerAddTask from "./TaskManagerAddTask";
 import TaskManagerDisplay from "./TaskManagerDisplay";
 import TaskManagerPleaseWait from "./TaskManagerPleaseWait";
+import {HTTP_ROOT} from "./HTTP_ROOT";
 
 
 class TaskManager extends React.Component {
@@ -39,7 +40,7 @@ class TaskManager extends React.Component {
 	/* load everything from the mongo database */
 	loaditup = () => {
 		this.openPleaseWait();
-		var work = "http://localhost:3000/";
+		var work = HTTP_ROOT;
 		var that = this;
 		var y = [];
 		var sortidx;
@@ -74,7 +75,7 @@ class TaskManager extends React.Component {
 	/* delete one record from Mongo DB */
 	deleteit = (a) => {
 		var body = "_id=" + a ;
-                var work = "http://localhost:3000/item/delete/";
+                var work = HTTP_ROOT + "item/delete/";
 		(async () => {
 			  const rawResponse = await fetch(work, {
 				      method: 'POST',
@@ -153,7 +154,7 @@ class TaskManager extends React.Component {
 
 	addit = (a,b) => {
 		var body = "name=" + a + "&priority=" + b;
-                var work = "http://localhost:3000/item/add/";
+                var work = HTTP_ROOT + "item/add/";
 		(async () => {
 			  const rawResponse = await fetch(work, {
 				      method: 'POST',

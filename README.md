@@ -55,5 +55,5 @@ You will be returned to the Task Manager
 
 ************************************************************
 
-Note: To run this on your own server, replace the 3 references to 'localhost' in TaskManager.js with your own IPv4 IP address.
+Note: To run this on your own server, replace the reference of 'localhost' in ReactApp/src/components/HTTP_ROOT.js with your own IPv4 IP address.
 

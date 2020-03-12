@@ -23,7 +23,6 @@ COPY package.json /app/docker-node-react/
 # just copy these things to the container for safekeeping
 COPY Dockerfile /app/docker-node-react/
 COPY LICENSE /app/docker-node-react/
-COPY README.md /app/docker-node-react/
 
 #install react-bootstrap
 WORKDIR /app/docker-node-react
